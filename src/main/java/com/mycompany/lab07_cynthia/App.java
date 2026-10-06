@@ -74,6 +74,17 @@ public class App extends Application {
             pathTransition.play();
             sequential.play();
         });
+        
+        resetButton.setOnAction(e -> {
+            pathTransition.stop();
+            sequential.stop();
+
+            objectB.setOpacity(1.0);
+            objectB.setScaleX(1.0);
+            objectB.setScaleY(1.0);
+            objectB.setRotate(0.0);
+            objectB.setTranslateY(0.0);
+        });
            
     }
 
