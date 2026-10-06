@@ -8,6 +8,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -41,6 +42,11 @@ public class App extends Application {
         topPane.getChildren().add(path);
        
         PathTransition pathTransition = new PathTransition(new Duration(12000), path, objectA);
+        
+        Ellipse objectB = new Ellipse( 350, 275, 70, 40);
+        objectB.setFill(Color.BLUE);
+        objectB.setStroke(Color.BLACK);
+        topPane.getChildren().add(objectB);
         
     }
 
