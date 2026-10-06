@@ -1,5 +1,6 @@
 package com.mycompany.lab07_cynthia;
 
+import javafx.animation.FadeTransition;
 import javafx.animation.PathTransition;
 import javafx.application.Application;
 import javafx.scene.control.Button;
@@ -47,6 +48,10 @@ public class App extends Application {
         objectB.setFill(Color.BLUE);
         objectB.setStroke(Color.BLACK);
         topPane.getChildren().add(objectB);
+        
+        FadeTransition fade = new FadeTransition(new Duration(3000), objectB);
+        fade.setFromValue(1.0);
+        fade.setToValue(0.2);
         
     }
 
