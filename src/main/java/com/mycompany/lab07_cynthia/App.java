@@ -69,7 +69,12 @@ public class App extends Application {
         translate.setToY(-100);
         
         SequentialTransition sequential = new SequentialTransition(fade, scale, rotate, translate);
-
+        
+        startButton.setOnAction(e -> {
+            pathTransition.play();
+            sequential.play();
+        });
+           
     }
 
     public static void main(String[] args) {
