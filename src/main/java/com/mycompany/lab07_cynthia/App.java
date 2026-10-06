@@ -1,5 +1,6 @@
 package com.mycompany.lab07_cynthia;
 
+import javafx.animation.PathTransition;
 import javafx.application.Application;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -9,6 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 
 /**
@@ -32,12 +34,13 @@ public class App extends Application {
         Circle objectA = new Circle(100, 100, 15);
         objectA.setFill(Color.RED);
         topPane.getChildren().add(objectA);
-        
-        
+              
         Polygon path = new Polygon(100, 100, 600, 100, 600, 450, 100, 450);
         path.setFill(Color.WHITE);
         path.setStroke(Color.BLACK);
         topPane.getChildren().add(path);
+       
+        PathTransition pathTransition = new PathTransition(new Duration(12000), path, objectA);
         
     }
 
