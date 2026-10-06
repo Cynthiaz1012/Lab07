@@ -2,6 +2,7 @@ package com.mycompany.lab07_cynthia;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.PathTransition;
+import javafx.animation.ScaleTransition;
 import javafx.application.Application;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -52,6 +53,11 @@ public class App extends Application {
         FadeTransition fade = new FadeTransition(new Duration(3000), objectB);
         fade.setFromValue(1.0);
         fade.setToValue(0.2);
+        
+        
+        ScaleTransition scale = new ScaleTransition(new Duration(3000), objectB);
+        scale.setToX(2.0);
+        scale.setToY(2.0);
         
     }
 
