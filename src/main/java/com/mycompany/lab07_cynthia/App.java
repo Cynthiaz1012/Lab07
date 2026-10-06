@@ -7,6 +7,7 @@ import javafx.animation.ScaleTransition;
 import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -25,7 +26,7 @@ import javafx.util.Duration;
 public class App extends Application {
 
     @Override
-    public void start(Stage stage) { 
+    public void start(Stage primaryStage) { 
         Pane topPane = new Pane();
         Button startButton = new Button("Start");
         Button resetButton = new Button("Reset");
@@ -85,7 +86,11 @@ public class App extends Application {
             objectB.setRotate(0.0);
             objectB.setTranslateY(0.0);
         });
-           
+        
+        Scene scene = new Scene(root,700,550);
+        primaryStage.setTitle("JavaFX Animation");
+        primaryStage.setScene(scene);
+        primaryStage.show();          
     }
 
     public static void main(String[] args) {
