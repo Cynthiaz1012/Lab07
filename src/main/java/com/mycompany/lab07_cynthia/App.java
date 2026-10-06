@@ -22,6 +22,7 @@ import javafx.util.Duration;
 
 /**
  * JavaFX App
+ * Git link: https://github.com/Cynthiaz1012/Lab07
  */
 public class App extends Application {
 
@@ -89,7 +90,6 @@ public class App extends Application {
         
         exitButton.setOnAction(e -> {
             primaryStage.close();
-
         });
         
         Scene scene = new Scene(root,700,550);
@@ -101,5 +101,4 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
-}   
+}
