@@ -4,6 +4,7 @@ import javafx.animation.FadeTransition;
 import javafx.animation.PathTransition;
 import javafx.animation.RotateTransition;
 import javafx.animation.ScaleTransition;
+import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.scene.control.Button;
@@ -66,6 +67,9 @@ public class App extends Application {
         
         TranslateTransition translate = new TranslateTransition(new Duration(3000), objectB);
         translate.setToY(-100);
+        
+        SequentialTransition sequential = new SequentialTransition(fade, scale, rotate, translate);
+
     }
 
     public static void main(String[] args) {
