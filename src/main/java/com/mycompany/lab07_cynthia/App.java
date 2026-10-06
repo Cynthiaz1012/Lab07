@@ -4,6 +4,7 @@ import javafx.animation.FadeTransition;
 import javafx.animation.PathTransition;
 import javafx.animation.RotateTransition;
 import javafx.animation.ScaleTransition;
+import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -62,6 +63,9 @@ public class App extends Application {
         RotateTransition rotate = new RotateTransition(new Duration(3000), objectB);
         rotate.setFromAngle(0.0);
         rotate.setByAngle(360.0);
+        
+        TranslateTransition translate = new TranslateTransition(new Duration(3000), objectB);
+        translate.setToY(-100);
     }
 
     public static void main(String[] args) {
