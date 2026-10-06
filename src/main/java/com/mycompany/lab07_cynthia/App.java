@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 
@@ -25,6 +27,10 @@ public class App extends Application {
         BorderPane root = new BorderPane();
         root.setCenter(topPane);
         root.setBottom(bottomPane);
+        
+        Circle objectA = new Circle(100, 100, 15);
+        objectA.setFill(Color.RED);
+        topPane.getChildren().add(objectA);
         
     }
 
