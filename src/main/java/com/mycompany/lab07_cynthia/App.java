@@ -87,6 +87,11 @@ public class App extends Application {
             objectB.setTranslateY(0.0);
         });
         
+        exitButton.setOnAction(e -> {
+            primaryStage.close();
+
+        });
+        
         Scene scene = new Scene(root,700,550);
         primaryStage.setTitle("JavaFX Animation");
         primaryStage.setScene(scene);
